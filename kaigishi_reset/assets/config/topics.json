@@ -1,0 +1,13 @@
+{
+  "topics": {
+    "nav_skill": { "ja": "航海術", "en": "Navigation" },
+    "law": { "ja": "法規", "en": "Maritime Law" }
+  },
+  "grades": {
+    "1": ["nav_skill", "law"],
+    "2": ["nav_skill", "law"],
+    "3": ["nav_skill", "law"],
+    "4": ["nav_skill", "law"],
+    "5": ["nav_skill", "law"]
+  }
+}
