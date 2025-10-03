@@ -1,0 +1,12 @@
+﻿[
+  {"id":"1_nav_skill_0001","grade":1,"topic_id":"nav_skill","question":"緯度1分は何海里？","choices":["1海里","10海里","60海里","600海里"],"answer_index":0,"explanation":"緯度1分=1海里(約1852m)。"},
+  {"id":"1_law_0001","grade":1,"topic_id":"law","question":"信号旗“A”の意味は？","choices":["危険物運搬中","私は潜水夫を下に入れている","港に入る","全速後進"],"answer_index":1,"explanation":"潜水夫あり。低速・十分な距離を取る。"},
+  {"id":"1_meteo_0001","grade":1,"topic_id":"meteo","question":"寒冷前線通過時に起こりやすい現象は？","choices":["連続性の雨","穏やかな霧","突風とにわか雨","無風"],"answer_index":2,"explanation":"寒冷前線は積乱雲・突風・にわか雨を伴いやすい。"},
+  {"id":"1_nav_instruments_0001","grade":1,"topic_id":"nav_instruments","question":"ジャイロコンパスの特性で誤っているのは？","choices":["自立性","地球自転による偏差","真北指示","磁気嵐の影響が大きい"],"answer_index":3,"explanation":"ジャイロは磁気嵐の影響は小さい。"},
+  {"id":"1_english_0001","grade":1,"topic_id":"english","question":"SMCP “Abandon ship” の意味は？","choices":["船を捨てよ","船尾に集合せよ","船首を風上へ","機関停止"],"answer_index":0,"explanation":"“Abandon ship”=総員退船。"},
+  {"id":"2_rules_0001","grade":2,"topic_id":"rules","question":"見張りの原則として正しいのは？","choices":["昼のみ必要","夜のみ必要","常時必要","気象の良い時のみ必要"],"answer_index":2,"explanation":"国際海上衝突予防規則では常時見張りが必要。"},
+  {"id":"2_cargo_0001","grade":2,"topic_id":"cargo","question":"バラスト水の主目的は？","choices":["推進力増加","復原性調整","燃費向上","速度向上"],"answer_index":1,"explanation":"復原性・トリム調整のために使用。"},
+  {"id":"3_engine_0001","grade":3,"topic_id":"engine","question":"ディーゼル機関で“直噴”とは？","choices":["吸気ポートに噴射","シリンダ内へ直接噴射","キャブレタで霧化","噴射しない"],"answer_index":1,"explanation":"燃焼室へ直接高圧噴射する方式。"},
+  {"id":"3_navcalc_0001","grade":3,"topic_id":"navcalc","question":"対地速度(SOG)は何から得られる？","choices":["レーダー","AIS","GPS","ログ"],"answer_index":3,"explanation":"SOGはGPSから得られる。"},
+  {"id":"3_meteo_0002","grade":3,"topic_id":"meteo","question":"台風の進行方向で右側が危険半円と言われる主因は？","choices":["気圧差が大きい","風の合成で風速が強い","降水帯が集中","海流の影響"],"answer_index":1,"explanation":"進行方向成分と反時計回り循環が合成され右半円で風が強くなる。"}
+]
