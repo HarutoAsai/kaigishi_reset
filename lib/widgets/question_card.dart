@@ -1,65 +1,92 @@
-﻿import 'package:flutter/material.dart';
-import '../models/question.dart';
+﻿import "package:flutter/material.dart";
+import "../models/question.dart";
+import "choice_tile.dart";
 
 class QuestionCard extends StatefulWidget {
-  final Question question;
-  final void Function(bool isCorrect) onAnswered;
-  const QuestionCard({super.key, required this.question, required this.onAnswered});
+  final Question q;
+  final void Function(bool correct) onAnswered;
+  const QuestionCard({super.key, required this.q, required this.onAnswered});
 
   @override
   State<QuestionCard> createState() => _QuestionCardState();
 }
 
 class _QuestionCardState extends State<QuestionCard> {
-  int? selectedIndex;
-  bool showExplanation = false;
+  int? selected;
+  bool locked = false;
 
   @override
   Widget build(BuildContext context) {
-    final q = widget.question;
+    final q = widget.q;
+    final cs = Theme.of(context).colorScheme;
+
     return Card(
-      elevation: 0,
-      margin: const EdgeInsets.all(8),
-      color: Theme.of(context).colorScheme.surface,
       child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(q.question, style: Theme.of(context).textTheme.titleMedium),
-          const SizedBox(height: 16),
-          ...List.generate(q.choices.length, (index) {
-            final choice = q.choices[index];
-            final isSelected = selectedIndex == index;
-            final isCorrect = q.answerIndex == index;
+        padding: const EdgeInsets.all(18),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Wrap(
+              spacing: 8, runSpacing: 8,
+              children: [
+                Chip(
+                  label: Text("第${q.grade}級", style: const TextStyle(fontWeight: FontWeight.w600)),
+                  backgroundColor: cs.secondaryContainer,
+                ),
+                Chip(
+                  label: Text(q.topicId),
+                  backgroundColor: cs.surfaceContainerHighest,
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Text(q.question, style: Theme.of(context).textTheme.titleLarge),
+            const SizedBox(height: 14),
+            ...List.generate(q.choices.length, (i) {
+              final choice = q.choices[i];
+              final isCorrect = q.answerIndex == i;
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 6),
+                child: ChoiceTile(
+                  text: choice,
+                  isSelected: selected == i,
+                  isCorrect: isCorrect,
+                  locked: locked,
+                  onTap: () {
+                    setState(() {
+                      selected = i;
+                      locked = true;
+                    });
+                    widget.onAnswered(isCorrect);
+                  },
+                ),
+              );
+            }),
+            const SizedBox(height: 12),
+            if (locked) _explanation(q.explanation),
+          ],
+        ),
+      ),
+    );
+  }
 
-            Color? tileColor;
-            if (selectedIndex != null) {
-              if (isSelected && isCorrect) {
-                tileColor = Colors.green[100];
-              } else if (isSelected && !isCorrect) {
-                tileColor = Colors.red[100];
-              } else if (isCorrect) {
-                tileColor = Colors.green[50];
-              }
-            }
-
-            return ListTile(
-              title: Text(choice),
-              tileColor: tileColor,
-              onTap: selectedIndex == null
-                  ? () {
-                      setState(() {
-                        selectedIndex = index;
-                        showExplanation = true;
-                      });
-                      widget.onAnswered(isCorrect);
-                    }
-                  : null,
-            );
-          }),
-          const SizedBox(height: 12),
-          if (showExplanation)
-            Text('解説: ${q.explanation}', style: const TextStyle(color: Colors.blueGrey)),
-        ]),
+  Widget _explanation(String text) {
+    final cs = Theme.of(context).colorScheme;
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 180),
+      curve: Curves.easeOut,
+      decoration: BoxDecoration(
+        color: cs.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      padding: const EdgeInsets.all(12),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(Icons.menu_book, color: cs.primary),
+          const SizedBox(width: 8),
+          Expanded(child: Text("解説: $text")),
+        ],
       ),
     );
   }
