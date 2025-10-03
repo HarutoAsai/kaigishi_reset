@@ -1,0 +1,117 @@
+[
+  {
+    "id": "1_nav_skill_0001",
+    "grade": 1,
+    "topic_id": "nav_skill",
+    "question": "緯度1分は何海里に相当するか？",
+    "choices": ["1海里", "10海里", "60海里", "600海里"],
+    "answer_index": 0,
+    "explanation": "緯度1分＝1海里（約1852m）。"
+  },
+  {
+    "id": "1_nav_skill_0002",
+    "grade": 1,
+    "topic_id": "nav_skill",
+    "question": "真方位000°の方向はどちらか？",
+    "choices": ["北", "東", "南", "西"],
+    "answer_index": 0,
+    "explanation": "真方位000°は北を示す。"
+  },
+  {
+    "id": "1_nav_skill_0003",
+    "grade": 1,
+    "topic_id": "nav_skill",
+    "question": "対地速度（Speed Over Ground）を略したものは？",
+    "choices": ["SOW", "SOG", "STW", "COG"],
+    "answer_index": 1,
+    "explanation": "SOG = Speed Over Ground（対地速度）。"
+  },
+  {
+    "id": "1_nav_skill_0004",
+    "grade": 1,
+    "topic_id": "nav_skill",
+    "question": "針路を変更することを英語で何という？",
+    "choices": ["Heave up", "Stand by", "Alter course", "Anchor"],
+    "answer_index": 2,
+    "explanation": "Alter course = 針路を変更する。"
+  },
+  {
+    "id": "1_nav_skill_0005",
+    "grade": 1,
+    "topic_id": "nav_skill",
+    "question": "大圏航法に比べて等角航法の特徴はどれか？",
+    "choices": [
+      "距離が常に最短となる",
+      "常に一定の方位で航行できる",
+      "航程が短くなる",
+      "風や潮に影響されない"
+    ],
+    "answer_index": 1,
+    "explanation": "等角航法は常に一定の方位で航行できる。"
+  },
+  {
+    "id": "1_law_0001",
+    "grade": 1,
+    "topic_id": "law",
+    "question": "国際信号旗“A”の意味として正しいものは？",
+    "choices": [
+      "危険物運搬中",
+      "私は潜水夫を下に入れている",
+      "港に入る",
+      "全速後進"
+    ],
+    "answer_index": 1,
+    "explanation": "信号旗“A”は「潜水夫あり」。他船は距離を保つ必要がある。"
+  },
+  {
+    "id": "1_law_0002",
+    "grade": 1,
+    "topic_id": "law",
+    "question": "COLREGの正式名称に最も近いものは？",
+    "choices": [
+      "国際海上衝突予防規則",
+      "SOLAS条約",
+      "MARPOL条約",
+      "STCW条約"
+    ],
+    "answer_index": 0,
+    "explanation": "COLREG = 国際海上衝突予防規則。"
+  },
+  {
+    "id": "1_law_0003",
+    "grade": 1,
+    "topic_id": "law",
+    "question": "「安全速力」を定めているのはどの規則か？",
+    "choices": [
+      "国際信号書",
+      "国際海上衝突予防規則（COLREG）",
+      "STCW条約",
+      "MARPOL条約"
+    ],
+    "answer_index": 1,
+    "explanation": "安全速力はCOLREG第6条に規定されている。"
+  },
+  {
+    "id": "1_law_0004",
+    "grade": 1,
+    "topic_id": "law",
+    "question": "船舶に備え付けが義務付けられている「航海日誌」を英語で何という？",
+    "choices": ["Sailing Book", "Sea Note", "Log Book", "Captain Diary"],
+    "answer_index": 2,
+    "explanation": "航海日誌はLog Bookと呼ばれる。"
+  },
+  {
+    "id": "1_law_0005",
+    "grade": 1,
+    "topic_id": "law",
+    "question": "MARPOL条約の目的として最も適切なものは？",
+    "choices": [
+      "船員の労働条件改善",
+      "船舶の安全確保",
+      "海洋汚染の防止",
+      "海賊対策"
+    ],
+    "answer_index": 2,
+    "explanation": "MARPOL条約は海洋汚染防止に関する国際条約。"
+  }
+]
